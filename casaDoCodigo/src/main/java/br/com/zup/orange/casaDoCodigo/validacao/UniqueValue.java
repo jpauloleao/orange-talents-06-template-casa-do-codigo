@@ -17,7 +17,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Retention(RUNTIME)
 public @interface UniqueValue {
 
-    String message() default "{O Email dever ser único}";
+    String message() default "{O campo dever ser único}";
     
     Class<?>[] groups() default {};
     

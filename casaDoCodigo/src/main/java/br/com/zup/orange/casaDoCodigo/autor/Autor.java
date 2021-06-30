@@ -29,21 +29,16 @@ public class Autor {
 	
 	private LocalDateTime criacao = LocalDateTime.now();
 
-	public Autor(@NotBlank(message = "Não pode ser vazio!") String nome,
-			@Email(message = "Digite um email válido!") @NotBlank(message = "Não pode ser vazio") String email,
+	public Autor(@NotBlank String nome,
+			@Email @NotBlank String email,
 			@Size(max = 400) String descricao) {
 		this.nome = nome;
 		this.email = email;
 		this.descricao = descricao;
 	}
 
-	public Autor() {
+	private Autor() {
 		// TODO Auto-generated constructor stub
 	}
-	
-	
-	
-	
-	
-	
+
 }
