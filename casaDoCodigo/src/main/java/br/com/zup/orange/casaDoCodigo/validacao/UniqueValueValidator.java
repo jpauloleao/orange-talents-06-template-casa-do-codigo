@@ -11,7 +11,7 @@ import javax.validation.ConstraintValidatorContext;
 import org.springframework.util.Assert;
 
 
-
+//Responsavel pela validação
 public class UniqueValueValidator implements ConstraintValidator<UniqueValue, Object>{
 	    
 	
