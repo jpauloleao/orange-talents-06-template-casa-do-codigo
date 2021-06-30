@@ -12,26 +12,24 @@ import org.springframework.util.Assert;
 
 
 //Responsavel pela validação
+
 public class UniqueValueValidator implements ConstraintValidator<UniqueValue, Object>{
-	    
-	
 	 	private String domainAttribute;
 	    private Class<?> klass;
-	    
 	    
 	    @PersistenceContext
 	    private EntityManager manager;
 
+	    
 	    @Override
 	    public void initialize(UniqueValue params) {
-
 	        domainAttribute = params.fieldName();
 	        klass = params.domainClass();
 	    }
 
+	    
 	    @Override
 	    public boolean isValid(Object value, ConstraintValidatorContext context) {
-
 	        Query query = manager.createQuery("select 1 from " + klass.getName() + " where " + domainAttribute + " = :value");
 	        query.setParameter("value", value);
 	        List<?> list = query.getResultList();
@@ -39,5 +37,5 @@ public class UniqueValueValidator implements ConstraintValidator<UniqueValue, Ob
 
 	        return list.isEmpty();
 	    }
-
 }
+//
