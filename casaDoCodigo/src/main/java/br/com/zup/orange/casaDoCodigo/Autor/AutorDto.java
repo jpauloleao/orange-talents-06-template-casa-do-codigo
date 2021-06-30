@@ -1,4 +1,4 @@
-package br.com.zup.orange.casaDoCodigo.autor;
+package br.com.zup.orange.casaDoCodigo.Autor;
 
 
 
@@ -6,7 +6,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
-import br.com.zup.orange.casaDoCodigo.validacao.UniqueValue;
+import br.com.zup.orange.casaDoCodigo.Validacao.UniqueValue;
 
 
 public class AutorDto {

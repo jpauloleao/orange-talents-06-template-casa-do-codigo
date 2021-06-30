@@ -5,8 +5,7 @@ import javax.validation.constraints.NotBlank;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonCreator.Mode;
 
-
-import br.com.zup.orange.casaDoCodigo.validacao.UniqueValue;
+import br.com.zup.orange.casaDoCodigo.Validacao.UniqueValue;
 
 public class CategoriaDto {
 

@@ -1,4 +1,4 @@
-package br.com.zup.orange.casaDoCodigo.autor;
+package br.com.zup.orange.casaDoCodigo.Autor;
 
 
 import javax.transaction.Transactional;

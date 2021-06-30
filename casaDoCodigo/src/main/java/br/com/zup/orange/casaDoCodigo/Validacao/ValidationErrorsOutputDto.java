@@ -1,4 +1,4 @@
-package br.com.zup.orange.casaDoCodigo.validacao;
+package br.com.zup.orange.casaDoCodigo.Validacao;
 
 import java.util.ArrayList;
 import java.util.List;

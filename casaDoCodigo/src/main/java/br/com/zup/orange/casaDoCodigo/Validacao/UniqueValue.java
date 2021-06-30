@@ -1,4 +1,4 @@
-package br.com.zup.orange.casaDoCodigo.validacao;
+package br.com.zup.orange.casaDoCodigo.Validacao;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
