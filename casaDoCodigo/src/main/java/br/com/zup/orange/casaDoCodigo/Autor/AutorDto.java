@@ -5,7 +5,6 @@ package br.com.zup.orange.casaDoCodigo.Autor;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
-
 import br.com.zup.orange.casaDoCodigo.Validacao.UniqueValue;
 
 
@@ -21,7 +20,7 @@ public class AutorDto {
 	
 	@Size(max = 400)
 	private String descricao;
-
+	
 	public AutorDto(@NotBlank(message = "Não pode ser vazio!") String nome,
 			@Email(message = "Digite um email válido!") @NotBlank(message = "Não pode ser vazio")  String email,
 			@Size(max = 400) String descricao) {

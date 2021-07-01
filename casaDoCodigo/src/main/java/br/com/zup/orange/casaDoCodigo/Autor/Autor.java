@@ -41,4 +41,18 @@ public class Autor {
 		// TODO Auto-generated constructor stub
 	}
 
+
+	public String getNome() {
+		return nome;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	
 }

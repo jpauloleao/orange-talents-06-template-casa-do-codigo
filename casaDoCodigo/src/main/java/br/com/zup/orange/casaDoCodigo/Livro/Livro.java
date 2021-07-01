@@ -96,6 +96,19 @@ public class Livro {
 	public Integer getNumeroPaginas() {
 		return numeroPaginas;
 	}
+
+	public String getSumario() {
+		return sumario;
+	}
+
+	public String getIsbn() {
+		return isbn;
+	}
+
+	public Autor getAutor() {
+		return autor;
+	}
+	
 	
 	
 	
