@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+
 @RestControllerAdvice
 public class ValidationHandler {
 
@@ -31,5 +32,15 @@ public class ValidationHandler {
 	        return va.buildValidationErrors(erros, fieldErrors);
 	    }
 
+	    @ResponseStatus(HttpStatus.BAD_REQUEST)
+	    @ExceptionHandler(IllegalStateException.class)
+	    public ValidationErrorsOutputDto argsInvalids(IllegalStateException exception) {
 
+	        ValidationErrorsOutputDto va = new ValidationErrorsOutputDto(messageSource);
+	        va.addError(exception.getMessage());
+	        
+	        return va;
+	    }
+	    
+	    	
 }

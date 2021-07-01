@@ -27,6 +27,12 @@ public class Categoria {
 	public String getNome() {
 		return nome;
 	}
+
+	@Deprecated
+	public Categoria() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	
 	
 }
