@@ -84,6 +84,20 @@ public class Livro {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public Integer getNumeroPaginas() {
+		return numeroPaginas;
+	}
+	
+	
 	
 	
 	

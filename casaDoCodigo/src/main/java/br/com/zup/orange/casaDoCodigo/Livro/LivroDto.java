@@ -3,7 +3,10 @@ package br.com.zup.orange.casaDoCodigo.Livro;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.stream.Collectors;
 
+import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.validation.constraints.Future;
 import javax.validation.constraints.Min;
@@ -76,11 +79,13 @@ public class LivroDto {
 	}
 
 	public Livro converter(EntityManager em) {
-		@NotNull Autor autor =  em.find(Autor.class, idAutor);
+		
+		@NotNull Autor autor = em.find(Autor.class, idAutor);
+		 
 		@NotNull Categoria categoria = em.find(Categoria.class, idCategoria);
-	
-		return new Livro(titulo, sumario, resumo, preco, numeroPaginas, isbn, data, categoria, autor );
+		
+		
+		return new Livro(titulo, sumario, resumo, preco, numeroPaginas, isbn, data, categoria, autor);
 	}
-	
 	
 }
