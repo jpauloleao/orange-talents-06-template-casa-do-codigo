@@ -11,7 +11,7 @@ import javax.validation.Constraint;
 import javax.validation.Payload;
 
 @Documented
-@Constraint(validatedBy = {objectExistsValidator.class})
+@Constraint(validatedBy = {ObjectExistsValidator.class})
 @Target({ FIELD})
 @Retention(RUNTIME)
 public @interface ObjectExists {

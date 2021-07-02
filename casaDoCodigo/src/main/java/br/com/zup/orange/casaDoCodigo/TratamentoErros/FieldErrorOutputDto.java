@@ -1,4 +1,4 @@
-package br.com.zup.orange.casaDoCodigo.Validacao;
+package br.com.zup.orange.casaDoCodigo.TratamentoErros;
 
 public class FieldErrorOutputDto {
 	private String field;

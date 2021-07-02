@@ -10,7 +10,7 @@ import javax.validation.ConstraintValidatorContext;
 
 import org.springframework.util.Assert;
 
-public class objectExistsValidator implements ConstraintValidator<ObjectExists, Object> {
+public class ObjectExistsValidator implements ConstraintValidator<ObjectExists, Object> {
  	private String domainAttribute;
     private Class<?> klass;
     

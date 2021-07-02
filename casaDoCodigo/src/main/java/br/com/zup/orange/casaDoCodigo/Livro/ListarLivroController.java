@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
-@RequestMapping("/listar")
+@RequestMapping("/livro")
 @RestController
 public class ListarLivroController {
 	
@@ -28,7 +28,7 @@ public class ListarLivroController {
 		return livro.converter(lv.findAll());
 	}
 	
-	@GetMapping("{id}")
+	@GetMapping("/{id}")
 	public ResponseEntity<?> listarLivro(@PathVariable Long id){
 		LivroDetalhesDto livro = new LivroDetalhesDto();
 		if(livro.converter(id, lv) == null) {

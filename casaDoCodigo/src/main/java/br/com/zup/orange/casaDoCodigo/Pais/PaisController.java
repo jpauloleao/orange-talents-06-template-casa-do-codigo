@@ -1,7 +1,5 @@
-package br.com.zup.orange.casaDoCodigo.Livro;
+package br.com.zup.orange.casaDoCodigo.Pais;
 
-
-import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
 import javax.validation.Valid;
 
@@ -13,23 +11,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
-
-@RequestMapping("/livro")
+@RequestMapping("/pais")
 @RestController
-public class LivroController {
-
+public class PaisController {
+	
 	@Autowired
-	private EntityManager em;
-	
+	private PaisRepository repository; 
+
 	@PostMapping
-	@Transactional
-	public ResponseEntity<?> cadastrarLivro(@RequestBody @Valid LivroDto livroDto){
-		
-		Livro livro = livroDto.converter(em);
-		em.persist(livro);
-		
-		return ResponseEntity.ok("Livro Cadastrado");
-	}
-	
+    @Transactional
+    public ResponseEntity<?> cadastrarPais(@RequestBody @Valid PaisDto paisDto) {
+        Pais pais = paisDto.converter();
+        repository.save(pais);
+        return ResponseEntity.ok("Pais Cadastrado");
+    }
 	
 }
