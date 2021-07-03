@@ -7,6 +7,7 @@ import br.com.zup.orange.casaDoCodigo.Autor.AutorLivroDto;
 
 
 public class LivroDetalhesDto {
+	
     private String sumario;
     private String titulo;
     private Integer numeroPaginas;

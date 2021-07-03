@@ -1,5 +1,6 @@
 package br.com.zup.orange.casaDoCodigo.TratamentoErros;
 
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.List;
 
 import org.springframework.validation.FieldError;
@@ -31,6 +32,16 @@ public class ValidationHandler {
 	        
 	        return va.buildValidationErrors(erros, fieldErrors);
 	    }
+	    
+	    @ResponseStatus(HttpStatus.BAD_REQUEST)
+	    @ExceptionHandler(NullPointerException.class)
+	    public ValidationErrorsOutputDto teste(NullPointerException exception) {
+
+	    	   ValidationErrorsOutputDto va = new ValidationErrorsOutputDto(messageSource);
+		        va.addError(exception.getMessage());
+		        
+		        return va;
+	    }
 
 	    @ResponseStatus(HttpStatus.BAD_REQUEST)
 	    @ExceptionHandler(IllegalStateException.class)
@@ -41,6 +52,16 @@ public class ValidationHandler {
 	        
 	        return va;
 	    }
+	    @ResponseStatus(HttpStatus.BAD_REQUEST)
+	    @ExceptionHandler(SQLIntegrityConstraintViolationException.class)
+	    public ValidationErrorsOutputDto sql(SQLIntegrityConstraintViolationException exception) {
+
+	        ValidationErrorsOutputDto va = new ValidationErrorsOutputDto(messageSource);
+	        va.addError(exception.getMessage());
+	        
+	        return va;
+	    }
+	    
 	    
 	    	
 }
